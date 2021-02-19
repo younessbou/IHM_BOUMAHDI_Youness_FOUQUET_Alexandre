@@ -1,0 +1,15 @@
+<table border="1">
+    <thead></thead>
+    
+    <tbody>
+        <ng-container *ngIf="users!=null" >
+        <tr *ngFor="let user of users.data">
+            <td><img src={{user.avatar}} alt="image"> </td>
+            <td>{{user.last_name}} {{user.first_name}} </td>
+            <td><button type="button" routerLink="/users/{{user.id}}" class="btn">Details</button><br>
+                <button type="button" class="btn" (click)="deleteEmployee(user.id)"> Delete</button></td>
+            
+            </tr>
+        </ng-container>
+    </tbody>
+      </table>

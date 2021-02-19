@@ -1,0 +1,11 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <h1>Inscription</h1>
+    <h1>Email :</h1> <input type="text" name="email" [(ngModel)]="email"><br>
+    <h1>Password :</h1> <input type="password" name="password" [(ngModel)]="password">
+    
+    <button class="btn btn-primary"  type="submit">Register</button>
+    <p *ngIf="invalid==true">ERREUR </p>
+    <p *ngIf="invalid==false">Réussi </p>
+    </form>
+  </div>
